@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <title>Glow</title>
+</head>
+<body style="overflow-x: hidden;">
+    <div class="preloader">
+        <div class="video-container">
+            <video class="loader-video" autoplay muted playsinline loop>
+                <source src="../Картинки/Comp 1_5.mp4" type="video/mp4">
+                <source src="your-animation.webm" type="video/webm">
+                Ваш браузер не поддерживает видео тег.
+            </video>
+        </div>
+    </div>
+    
+
+
+    <script>
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            const video = document.querySelector('.loader-video');
+
+            video.addEventListener('ended', () => {
+                hidePreloader();
+            });
+        
+            setTimeout(hidePreloader, 2500); 
+
+            function hidePreloader() {
+                preloader.classList.add('preloader-hidden');
+                preloader.addEventListener('transitionend', () => {
+                    preloader.style.display = 'none';
+                    video.pause();
+                });
+            }
+        });
+    </script>
+
+      <header class="header">
+        <div class="header-container">
+            <img src="../Картинки/логотип.png">
+             <nav class="navbar">
+                <input type="checkbox" id="burger-toggle" class="burger-toggle" />
+                <label for="burger-toggle" class="burger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <div class="nav-group">
+                        <li><a href="#about" class="nav-item">О нас</a></li>
+                        <li><a href="#product" class="nav-item">О продукте</a></li>
+                        <li><a href="#reviews" class="nav-item">Отзывы</a></li>
+                    </div>
+                </ul>
+                <a href="https://www.figma.com/design/3gKBid3YXhVLNO6kzh7qN8/веб-дизайн?node-id=0-1&p=f&t=Db39W8XRT7J3hgiz-0" target="_blank" class="nav-item-down">Скачать</a>
+                <div class="popup-menu">
+                    <a href="#about" class="popup-link">О нас</a>
+                    <a href="#product" class="popup-link">О продукте</a>
+                    <a href="#reviews" class="popup-link">Отзывы</a>
+                </div>
+                </nav>
+        </div>
+    </header>
+    
+    <div class="slogan-container">
+        <div class="slogan">
+            <div class="slogan-line1">СИЯЙ каждый день</div>
+            <div class="slogan-line2">с косметичкой, которая заботится о тебе и природе!</div>
+        </div>
+    </div>
+    <div id="cursor-trail-container"></div>
+    <div class="stats-container-wrapper">
+        <div class="stats-container">
+                <div class="stat-box">
+                    <button class="round" id="scroll-btn">
+                    <img src="../Картинки/стрелка.png" alt="Описание" class="img-stats"/>
+                </button>
+                    <div class="stat-number">50к</div>
+                    <div class="stat-text">скачиваний</div>
+                    
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">2к</div>
+                    <div class="stat-text">партнеров</div>
+                </div>
+                <div class="stat-box stat-box-375">
+                    <div class="stat-number1 ">>30к</div>
+                    <div class="stat-text1">довольных клиентов</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-block">
+        <div class="text-content" id="about">
+            <h2 class="title">О нас</h2>
+            <p class="paragraph">
+            <span class="line">Glow – это инновационный стартап, созданный</span>
+            <span class="line">для тех, кто ценит качественный уход за кожей</span>
+            <span class="line">и заботу о природе. Мы верим, что красота</span>
+            <span class="line">начинается с заботы - не только о себе,</span>
+            <span class="line">но и о планете.</span>
+            </p>
+
+            <p class="mission">
+            <span class="line">Наша миссия - помочь каждому пользователю</span>
+            <span class="line">бережно управлять своей косметикой, экономить</span>
+            <span class="line">время и деньги, а также минимизировать негативное</span>
+            <span class="line">воздействие на окружающую среду.</span>
+            </p>
+        </div>
+        <div class="animation">
+        <img class="animation__img" src="../Картинки/Group 907.png" alt="Описание изображения">
+        </div>
+    </div>
+    <div class="full-width-container" id="product">
+    <div class="content-container11">
+        <h2 class="title">О продукте</h2>
+        <p class="description">Мы создали онлайн косметичку, которая не просто хранит список ваших <br> средств, а становится вашим персональным консультантом <br> и экологичным помощником.</p>
+
+        <div class="squares-container">
+            <div class="square large">
+                <div class="square-inner">
+                    <div class="square-front">
+                        <img src="../Картинки/Vector 1174.png" alt="Иконка">
+                        <div class="label">Сроки годности</div>
+                    </div>
+                    <div class="square-back">
+                        <div class="info-box">
+                            <p style="font-family: 'Inter SemiBold';">Контролируйте свежесть и безопасность косметики, чтобы использовать продукты вовремя и избежать неприятных последствий</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square small">
+                <div class="square-inner">
+                    <div class="square-front">
+                    <div class="label">Бонусная <br> система</div>
+                    </div>
+                    <div class="square-back">
+                    <div class="info-box">
+                        <p style="font-family: 'Inter SemiBold';">Накапливайте баллы за покупки и получайте скидки у партнеров</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="square small">
+                <div class="square-inner">
+                    <div class="square-front">
+                    <div class="label">Проверка <br> состава</div>
+                    </div>
+                    <div class="square-back">
+                    <div class="info-box">
+                        <p style="font-family: 'Inter SemiBold';">Узнавайте состав косметики, чтобы выбирать средства подходящие именно Вам</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            <div class="square large">
+                <div class="square-inner">
+                    <div class="square-front">
+                        <img src="../Картинки/Vector 1174.png" alt="Иконка">
+                        <div class="label">Мониторинг трат</div>
+                    </div>
+                    <div class="square-back">
+                        <div class="info-box">
+                            <p style="font-family: 'Inter SemiBold';">Следите за расходами на косметику, планируйте бюджет и оптимизируйте покупки</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="square full-width">
+                <div class="square-inner">
+                    <div class="square-front">
+                        <img src="../Картинки/Vector 1174.png" alt="Иконка">
+                        <div class="label">Пункты утилизации</div>
+                    </div>
+                    <div class="square-back">
+                        <div class="info-box">
+                            <p style="font-family: 'Inter SemiBold';">Находите удобные места для экологичной сдачи пустой упаковки и заботьтесь о природе вместе с нами!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="full-width-container2" id="reviews">
+        <div class="content-container11">
+        <h2 class="title">Отзывы</h2>
+        <div class="reviews-slider">
+        <div class="reviews-track" id="reviewsTrack">
+            <div class="review-card">
+            <div class="profile">
+                <img src="../Картинки/8e9be27faf776b51de02c23580692ab7.jpg" alt="Профиль">
+                <span class="name">Алиса</span>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="review-text">
+                Очень понравился дизайн и удобство использования. Приложение помогает мне держать все важные дела.
+                
+            </div>
+            </div>
+            <div class="review-card">
+            <div class="profile">
+                <img src="../Картинки/8fc59967a531a6d781fc98ab7ddd0a04.jpg" alt="Профиль">
+                <span class="name">Марина</span>
+                <div class="stars">★★★★★</div>
+            </div>
+            
+            <div class="review-text">
+                Отличное приложение с мощным функционалом. <br> 
+                Особенно ценю плавную анимацию.
+            </div>
+            </div>
+            <div class="review-card">
+            <div class="profile">
+                <img src="../Картинки/73c36db8c8955c663886bd6b91017313.jpg" alt="Профиль">
+                <span class="name">Света</span>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="review-text">
+                Пользуюсь уже несколько месяцев и ни разу не пожалел. Интерфейс <br> 
+                современный.
+            </div>
+            </div>
+            <div class="review-card">
+            <div class="profile">
+                <img src="../Картинки/8e9be27faf776b51de02c23580692ab7.jpg" alt="Профиль">
+                <span class="name">Катя</span>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="review-text">
+                Приложение просто супер!
+            </div>
+            </div>
+            <div class="review-card">
+            <div class="profile">
+                <img src="../Картинки/8fc59967a531a6d781fc98ab7ddd0a04.jpg" alt="Профиль">
+                <span class="name">Саша</span>
+                <div class="stars">★★★★★</div>
+            </div>
+            
+            <div class="review-text">
+                Однозначно самое полезное приложение за последнее время!
+            </div>
+            </div>
+            <div class="review-card">
+            <div class="profile">
+                <img src="../Картинки/73c36db8c8955c663886bd6b91017313.jpg" alt="Профиль">
+                <span class="name">Вика</span>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="review-text">
+                Это лучшее приложение! Я стала более осознанной в выборе косметики.<br>
+                Это любовь однозначно.
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="full-width-container3">
+        <div class="content-container22">
+            <h2 class="title">Свяжитесь с нами</h2>
+            <p class="description2">Если у Вас есть вопросы или возникли <br> сложности, напишите нам!</p>
+            <form class="contact-form">
+            <div class="left-fields">
+                <input type="text" placeholder="Имя *" required>
+                <input type="text" placeholder="Фамилия *" required>
+                <input type="text" placeholder="Отчество *" required>
+                <input type="tel" placeholder="Телефон *" required>
+                <input type="email" placeholder="Почта *" required>
+            </div>
+
+            <div class="right-field">
+                <p style="margin-bottom: 8px; color: #757575;" >Вопрос*</p>
+                <textarea placeholder="" required></textarea>
+            </div>
+
+            <div class="checkbox-container">
+                <div class="obrabotka">
+                <input type="checkbox" id="agree" required>
+                <label for="agree" class="label-obrabotka">Я согласен с Обработкой персональных данных.</label>
+                </div>
+                <button type="submit">Отправить</button>
+            </div>
+            </form>
+    </div>
+    </div>
+
+    <div class="full-width-container4" id="download">
+        <div class="content-container33">
+            <div class="app-section">
+                <div class="app-left">
+                    <h2 class="title2">Присоединяйтесь к нам,<br>скачивайте приложение!</h2>
+                    
+                    <div class="app-buttons">
+                        <a href="https://www.figma.com/design/3gKBid3YXhVLNO6kzh7qN8/веб-дизайн?node-id=0-1&p=f&t=Db39W8XRT7J3hgiz-0" target="_blank">
+                            <img src="../Картинки/appstore.png" alt="App Store" class="app-button">
+                        </a>
+
+                        <a href="https://www.figma.com/design/3gKBid3YXhVLNO6kzh7qN8/веб-дизайн?node-id=0-1&p=f&t=Db39W8XRT7J3hgiz-0" target="_blank">
+                            <img src="../Картинки/google play.png" alt="Google Play" class="app-button">
+                        </a>
+                    </div>
+                    
+                    <div class="qr-container">
+                        <img src="../Картинки/qr.png" class="qr-code"></img>
+                        <p class="qr-text">Наведите камеру и скачайте бесплатное приложение Glow!</p>
+                    </div>
+                </div>
+                
+                <div class="app-right">
+                <div class="image-container">
+                    <img src="../Картинки/светлаятема.png" alt="Обычное изображение" class="app-image default">
+                    <img src="../Картинки/темнаятема.png" alt="Изображение при наведении" class="app-image hover">
+                </div>
+                <div class="qr-container1">
+                        <img src="../Картинки/qr.png" class="qr-code1"></img>
+                        <p class="qr-text1">Наведите камеру и скачайте бесплатное приложение Glow!</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="full-width-container5"></div>
+<div class="full-width-container6">
+    <div class="footer-content">
+        <div class="footer-row top-row">
+            <div class="footer-item">8 (914) 899-23-12</div>
+            <div class="footer-item"><a href="mailto:glow@mail.ru">glow@mail.ru</a></div>
+        </div>
+        
+        <div class="footer-row">
+            <div class="footer-item">ул. Гоголевская 85 к. 2</div>
+        </div>
+        
+        <div class="footer-row bottom-row">
+            <div class="footer-item">Санкт-Петербург</div>
+            <div class="footer-item">© 2025</div>
+            <div class="footer-item"><a href="#">Обработка персональных данных</a></div>
+        </div>
+    </div>
+    <div class="footer-content1">
+        <div class="footer-row top-row">
+            <div class="footer-item">8 (914) 899-23-12</div>
+        </div>
+        
+        <div class="footer-row">
+            <div class="footer-item"><a href="mailto:glow@mail.ru">glow@mail.ru</a></div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-item">Санкт-Петербург</div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-item">ул. Гоголевская 85 к. 2</div>
+        </div>
+        <div class="footer-row">
+            <div class="footer-item"><a href="#">Обработка персональных данных</a></div>
+        </div>
+        
+        <div class="footer-row bottom-row">
+            <div class="footer-item">© 2025</div>
+        </div>
+    </div>
+</div>
+    <script>
+    const trailImages = [
+  '../Картинки/Group 560.png',
+  '../Картинки/Group 561.png',
+  '../Картинки/Group 562.png',
+  '../Картинки/Group 563.png',
+  '../Картинки/Group 564.png'
+];
+
+let imageIndex = 0;
+const trailInterval = 130;
+let lastTrailTime = 0;
+
+const cursorTrailContainer = document.getElementById('cursor-trail-container');
+
+document.addEventListener('mousemove', (e) => {
+  const now = Date.now();
+  if (now - lastTrailTime < trailInterval) return;
+  lastTrailTime = now;
+
+  if (!cursorTrailContainer) return;
+  const containerRect = cursorTrailContainer.getBoundingClientRect();
+
+  if (e.clientX < containerRect.left || e.clientX > containerRect.right ||
+      e.clientY < containerRect.top || e.clientY > containerRect.bottom) return;
+
+  const img = document.createElement('img');
+  img.src = trailImages[imageIndex % trailImages.length];
+  imageIndex++;
+  img.className = 'cursor-float';
+
+  img.style.left = (e.clientX - containerRect.left - 32) + 'px';
+  img.style.top = (e.clientY - containerRect.top - 32) + 'px';
+
+  cursorTrailContainer.appendChild(img);
+
+  requestAnimationFrame(() => {
+    img.classList.add('visible');
+  });
+
+  setTimeout(() => {
+    img.classList.remove('visible');
+    setTimeout(() => {
+      img.remove();
+    }, 700);
+  }, 900);
+});
+
+let img = document.querySelector('.animation__img'),
+    animationBlock = document.querySelector('.animation');
+animationBlock.addEventListener('mousemove', (e) => {
+  if (e.target.classList.contains('animation__img')) {
+    let topCurs = Math.round(e.offsetY - animationBlock.offsetHeight / 2) / 50;
+    let leftCurs = Math.round(e.offsetX - animationBlock.offsetWidth / 2) / 1000;
+    img.style.transform = `rotateX(${topCurs}deg) rotateY(${-leftCurs}deg)`;
+  }
+});
+
+const track = document.getElementById('reviewsTrack');
+let scrollPos = 0;
+const speed = 0.5;
+let animationId;
+let isPaused = false;
+
+function animate() {
+  if (!isPaused) {
+    scrollPos += speed;
+    if (scrollPos >= track.scrollWidth / 2) {
+      scrollPos = 0;
+    }
+    track.style.transform = `translateX(${-scrollPos}px)`;
+  }
+  animationId = requestAnimationFrame(animate);
+}
+
+animate();
+
+track.parentElement.addEventListener('mouseenter', () => {
+  isPaused = true;
+});
+
+track.parentElement.addEventListener('mouseleave', () => {
+  isPaused = false;
+});
+
+ document.getElementById('scroll-btn').addEventListener('click', () => {
+
+    const target = document.getElementById('download');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+
+      history.pushState(null, null, '#download');
+    }
+  });
+  window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) { 
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault(); 
+
+    const targetID = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetID);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',  
+        block: 'center'      
+      });
+    }
+  });
+});
+const lines = document.querySelectorAll('.paragraph .line, .mission .line');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    } else {
+      entry.target.classList.remove('active');
+    }
+  });
+}, {
+  threshold: 1  
+});
+
+lines.forEach(line => observer.observe(line));
+
+const burgerToggle = document.getElementById('burger-toggle');
+
+const menuLinks = document.querySelectorAll('.popup-link, .nav-item');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    burgerToggle.checked = false;
+  });
+});
+
+// Добавьте этот код в ваш существующий script
+function sendToTelegram(formData) {
+    const token = '8382947526:AAHKlV2mDnsGVg0uGlFUzOZ-zKQU5Px8V7k'; // Замените на токен вашего бота
+    const chatId = '-5068818397'; // Замените на ваш chat_id
+    
+    // Формируем сообщение
+    const message = `
+📧 Новая заявка с сайта Glow
+
+👤 Имя: ${formData.name}
+👤 Фамилия: ${formData.surname}
+👤 Отчество: ${formData.patronymic}
+📞 Телефон: ${formData.phone}
+📧 Email: ${formData.email}
+❓ Вопрос: ${formData.question}
+    `.trim();
+
+    // Кодируем сообщение для URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Отправляем запрос к Telegram API
+    fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodedMessage}&parse_mode=HTML`)
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Сообщение успешно отправлено! Мы свяжемся с вами в ближайшее время.');
+            } else {
+                alert('Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Произошла ошибка при отправке сообщения.');
+        });
+}
+
+// Обновляем обработчик формы
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form');
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Собираем данные формы
+        const formData = {
+            name: this.querySelector('input[placeholder="Имя *"]').value,
+            surname: this.querySelector('input[placeholder="Фамилия *"]').value,
+            patronymic: this.querySelector('input[placeholder="Отчество *"]').value,
+            phone: this.querySelector('input[placeholder="Телефон *"]').value,
+            email: this.querySelector('input[placeholder="Почта *"]').value,
+            question: this.querySelector('textarea').value
+        };
+        
+        // Проверяем согласие на обработку данных
+        const agreeCheckbox = document.getElementById('agree');
+        if (!agreeCheckbox.checked) {
+            alert('Пожалуйста, дайте согласие на обработку персональных данных.');
+            return;
+        }
+        
+        // Отправляем в Telegram
+        sendToTelegram(formData);
+        
+        // Очищаем форму после отправки
+        this.reset();
+    });
+});
+</script>
+</body>
+</html>
